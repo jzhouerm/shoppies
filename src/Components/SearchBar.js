@@ -4,7 +4,7 @@ const SearchBar = (props)=> {
 
     return (
         <div>
-            <input type="text" placeholder="Search Film by Title..."/>
+            <SearchBar/>
         </div>
     )
 }

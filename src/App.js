@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import SearchBar from './SearchBar.js'
+import MovieContainer from './Containers/MovieContainer.js'
 
 const data=[
   {
@@ -23,7 +23,7 @@ function App() {
   
   return (
     <div className="App">
-      <SearchBar/>
+      <MovieContainer/>
       
     </div>
   );
