@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from './SearchBar.js'
+
+const data=[
+  {
+      Poster: "https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+      Title: "Harry Potter and the Deathly Hallows: Part 2",
+      Type: "movie",
+      Year: "2011",
+      imdbID: "tt1201607"
+  },
+  {
+      Title: "Spaceballs",
+      Year: "1987",
+      imdbID: "tt0094012",
+      Type: "movie",
+      Poster: "https://m.media-amazon.com/images/M/MV5BMjVjOGQ0OTctNDhkZC00ZGNiLWI2ZGEtYjZlMWZjOTlkNDlhXkEyXkFqcGdeQXVyNjg1MjEwOTM@._V1_SX300.jpg"
+  },
+]
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchBar/>
+
     </div>
   );
 }
