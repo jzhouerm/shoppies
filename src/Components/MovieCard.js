@@ -4,9 +4,10 @@ const MovieCard = ({movieInfo})=> {
 console.log(movieInfo)
 
     return (
-        <div>
-
-        </div>
+        <>
+            <li>{movieInfo.Title}, {movieInfo.Year}</li>
+            <button>Nominate</button>
+        </>
     )
 }
 

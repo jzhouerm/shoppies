@@ -12,7 +12,6 @@ const Results = (props)=> {
         <div>
             <ul>
                 {renderMovies()}
-
             </ul>
         </div>
     )
