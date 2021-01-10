@@ -1,7 +1,7 @@
 import './App.css';
 import MovieContainer from './Containers/MovieContainer.js'
 
-const data=[
+const movieData=[
   {
       Poster: "https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
       Title: "Harry Potter and the Deathly Hallows: Part 2",
@@ -9,6 +9,7 @@ const data=[
       Year: "2011",
       imdbID: "tt1201607"
   },
+
   {
       Title: "Spaceballs",
       Year: "1987",
@@ -20,9 +21,10 @@ const data=[
 
 function App() {
   
+  console.log(movieData)
   return (
     <div className="App">
-      <MovieContainer/>
+      <MovieContainer movieData={movieData} string="james"/>
       
     </div>
   );

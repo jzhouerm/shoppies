@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const SearchBar = (props)=> {
-    const [search, setSearch] = useState("James")
+    const [search, setSearch] = useState("")
     console.log(search)
     return (
         <div>

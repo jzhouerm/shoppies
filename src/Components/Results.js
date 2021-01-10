@@ -1,15 +1,17 @@
 import React from 'react'
+import MovieCard from './MovieCard'
 
 const Results = (props)=> {
+    console.log(props)
+
+    const renderMovies = () =>{
+        return props.movieData.map(movie => <MovieCard movieInfo={movie}/>)
+    }
 
     return (
         <div>
             <ul>
-                <li>Movie1</li>
-                <li>Movie2</li>
-                <li>Movie3</li>
-                <li>Movie4</li>
-                <li>Movie5</li>
+                {renderMovies()}
 
             </ul>
         </div>
