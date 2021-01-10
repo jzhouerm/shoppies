@@ -7,8 +7,6 @@ const SearchBar = (props)=> {
         <div>
             <input type="text" placeholder="Search Movie by Title" value= {search} onChange={ (e) => setSearch(e.target.value)}/>
             <input type="text" placeholder="Search Movie by Title" value= {search} onChange={ (e) => setSearch(e.target.value)}/>
-            <input type="text" placeholder="Search Movie by Title" value= {search} onChange={ (e) => setSearch(e.target.value)}/>
-
         </div>
     )
 }
