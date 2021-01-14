@@ -10,6 +10,8 @@ const Nominations = (props)=> {
                 <li>Nomination3</li>
                 <li>Nomination4</li>
                 <li>Nomination5</li>
+                <li>Nomination5</li>
+
 
             </ul>
         </div>
