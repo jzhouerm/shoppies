@@ -4,12 +4,11 @@ import Results from '../Components/Results.js'
 import Nominations from '../Components/Nominations.js'
 
 
-const MovieContainer = ({movieData, string})=> {
+const MovieContainer = ({movieData, changeHandler})=> {
 
-    console.log(string)
     return (
         <div>
-            <SearchBar/>
+            <SearchBar changeHandler={changeHandler}/>
             <Results movieData={movieData}/>
             <Nominations/>
 
