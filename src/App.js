@@ -20,15 +20,10 @@ const movieData=[
 ]
 
 function App() {
-
-  const changeHandler =(searchValue) =>{
-    // set the new state and send up to parent
-    console.log("inside App.js", searchValue)
-  }
-  
+console.log(movieData)
   return (
     <div className="App">
-      <MovieContainer movieData={movieData} changeHandler={changeHandler}/>
+      <MovieContainer movieData={movieData}/>
       
     </div>
   );
