@@ -1,11 +1,11 @@
 import React from 'react'
 import MovieCard from './MovieCard'
 
-const Results = (props)=> {
+const Results = ({movieData})=> {
     // console.log(props)
 
     const renderMovies = () =>{
-        return props.movieData.map(movie => <MovieCard movieInfo={movie}/>)
+        return movieData.map(movie => <MovieCard movieInfo={movie}/>)
     }
 
     return (

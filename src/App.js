@@ -1,5 +1,6 @@
 import './App.css';
 import MovieContainer from './Containers/MovieContainer.js'
+import VariableContext from './Components/Context'
 
 const movieData=[
   {
@@ -20,12 +21,16 @@ const movieData=[
 ]
 
 function App() {
-console.log(movieData)
+
+  const girl = "jules"
+
   return (
-    <div className="App">
-      <MovieContainer movieData={movieData}/>
-      
-    </div>
+    <VariableContext.Provider value={{girl}}>
+      <div className="App">
+        <MovieContainer movieData={movieData}/>
+        
+      </div>
+    </VariableContext.Provider>
   );
 }
 
