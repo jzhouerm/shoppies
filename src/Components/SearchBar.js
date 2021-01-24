@@ -1,12 +1,11 @@
-import React, {useState} from 'react'
-import { Input, InputAdornment } from '@material-ui/core';
-import { Search } from '@material-ui/icons';
+import React from 'react'
 
+const SearchBar = ({search, setSearch}) =>(
 
-const SearchBar = ({search, setSearch}) => (
-        <Input type="text" value={search} onChange={(e) => setSearch(e.target.value)} 
-        startAdornment={<InputAdornment><Search/></InputAdornment>}
-        />
+        <input type='text' value={search} onChange={(e) => setSearch(e.target.value)}/>
+
 )
+
+
 
 export default SearchBar

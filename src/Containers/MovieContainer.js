@@ -4,7 +4,9 @@ import Nominations from '../Components/Nominations.js'
 import SearchBar from '../Components/SearchBar.js'
 
 const MovieContainer = ({movieData})=> {
+
     const [search, setSearch] = useState("")
+
     //useState is the hook
     //search and setSearch are state variables within the useState hook where search is the value and setSearch is a function that allows you change the value of search
 
