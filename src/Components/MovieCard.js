@@ -13,11 +13,9 @@ const MovieCard = ({movieInfo})=> {
         setNomBtn(!nomBtn)
     }
 
-    const variable = "james"
-    console.log(context)
     return (
         <>
-            <li>{movieInfo.Title}, {movieInfo.Year}, {variable}</li>
+            <li>{movieInfo.Title}, {movieInfo.Year}</li>
             <button onClick={() => changeStatus()}>
                 {nomBtn ? "Nominated" : "Nominate"}
             </button>

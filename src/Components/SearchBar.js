@@ -1,10 +1,16 @@
 import React from 'react'
 
-const SearchBar = ({search, setSearch}) =>(
+//This component should only be responsible for taking in search text and setting the search state and passing it up
+const SearchBar = ({search, setSearch}) =>{
 
-        <input type='text' value={search} onChange={(e) => setSearch(e.target.value)}/>
 
-)
+        return (
+
+                <input type='text' value={search} onChange={(e) => setSearch(e.target.value)}/>
+        )
+
+
+}
 
 
 

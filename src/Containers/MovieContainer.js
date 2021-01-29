@@ -5,27 +5,44 @@ import SearchBar from '../Components/SearchBar.js'
 import ApiKey from '../Components/ApiKey.js'
 
 const MovieContainer = ({movieData})=> {
-    console.log(ApiKey)
 
     const [search, setSearch] = useState("")
+    const [data, setData] = useState([])
 
-    const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey="
     //useState is the hook
     //search and setSearch are state variables within the useState hook where search is the value and setSearch is a function that allows you change the value of search
 
-    const movieFilter = () => (
-        movieData.filter(el => el.Title.toLowerCase().includes(search.toLowerCase()))
-    )
+    // const movieFilter = () => (
+    //     data.filter(el => el.Title.toLowerCase().includes(search.toLowerCase()))
+    // )
+
+    const loadData = async () =>{
+        //if search is empty string, break
+        if (search === "") return 
+        const query = search.replace(" ", "_")
+        const API_URL = `http://www.omdbapi.com/?i=tt3896198&apikey=${ApiKey}&s=${query}`
+        console.log(API_URL)
+        
+        const response = await fetch(API_URL)  
+        const data = await response.json()
+        if (data["Response"] === "False"){
+            setData([])
+        }
+        else{setData(data["Search"])}
+    }
+
     
     useEffect(() => {
-        
+        loadData()
+      }, [search])
 
-      }, [])
+    // console.log(API_URL)
 
     return (
+        
         <div>
             <SearchBar search={search} setSearch={setSearch}/>
-            <Results movieData={movieFilter()}/>
+            <Results movieData={data}/>
             <Nominations/>
 
         </div>
