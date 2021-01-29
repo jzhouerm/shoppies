@@ -2,9 +2,10 @@ import React, {useState, useEffect} from 'react'
 import Results from '../Components/Results.js'
 import Nominations from '../Components/Nominations.js'
 import SearchBar from '../Components/SearchBar.js'
-import ApiKey from '../../ApiKey.js'
+import ApiKey from '../Components/ApiKey.js'
 
 const MovieContainer = ({movieData})=> {
+    console.log(ApiKey)
 
     const [search, setSearch] = useState("")
 
