@@ -9,12 +9,12 @@ const MovieContainer = ({movieData})=> {
     const [search, setSearch] = useState("")
     const [data, setData] = useState([])
 
-    //useState is the hook
-    //search and setSearch are state variables within the useState hook where search is the value and setSearch is a function that allows you change the value of search
+    useState is the hook
+    search and setSearch are state variables within the useState hook where search is the value and setSearch is a function that allows you change the value of search
 
-    // const movieFilter = () => (
-    //     data.filter(el => el.Title.toLowerCase().includes(search.toLowerCase()))
-    // )
+    const movieFilter = () => (
+        data.filter(el => el.Title.toLowerCase().includes(search.toLowerCase()))
+    )
 
     const loadData = async () =>{
         //if search is empty string, break
