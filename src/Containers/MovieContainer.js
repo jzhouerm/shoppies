@@ -15,6 +15,7 @@ const MovieContainer = ({movieData})=> {
     const movieFilter = () => (
         data.filter(el => el.Title.toLowerCase().includes(search.toLowerCase()))
     )
+    
 
     const loadData = async () =>{
         //if search is empty string, break
